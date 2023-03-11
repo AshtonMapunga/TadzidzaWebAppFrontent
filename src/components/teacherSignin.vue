@@ -5,7 +5,7 @@
     max-width="644"
     style="margin-top: 40px;"  >
   <p class="signInHeader">Already have an account? <router-link to="/teacher-login">Sign in</router-link></p>
-   <h1 class="signInHeader">Sign up to Tadzidza</h1>
+   <h1 class="signInHeader">Sign up to WeLearn</h1>
        <v-divider></v-divider>
 <template>
   <v-form

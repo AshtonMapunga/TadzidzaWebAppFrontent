@@ -4,7 +4,7 @@
     class="mx-auto"
     max-width="644"
     style="margin-top: 100px;"  >
-   <h1 class="signInHeader">Sign in to TItle</h1>
+   <h1 class="signInHeader">Sign in to WeLearn</h1>
        <v-divider></v-divider>
  <v-form
     ref="form"
@@ -38,7 +38,7 @@
     </v-btn>
   </v-form>
 
-        <p class="ml-5">New to Title? <router-link to="/teacher-signin">Create an account</router-link></p>
+        <p class="ml-5">New to WeLearn? <router-link to="/teacher-signin">Create an account</router-link></p>
   <br>
     <v-spacer></v-spacer>
         <v-spacer></v-spacer>

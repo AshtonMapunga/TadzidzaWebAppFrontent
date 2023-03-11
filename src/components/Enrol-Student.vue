@@ -25,6 +25,8 @@
           </v-btn>    
         </router-link>
         <br>
+        <p></p>
+        <br>
     </v-card>
     <v-card v-show="Success">
       <v-card class="mr-4 ml-4 mt-4" color="indigo darken-2" dark>You have successfully enroled first year students</v-card>
@@ -39,6 +41,8 @@
           </v-btn>    
         </router-link>
         <br>
+        <br>
+      
     </v-card>
     <v-card elevation="0"     v-show="!Success">
       <v-form
@@ -122,12 +126,15 @@
       >
         Enrol
       </v-btn>
-
+      <br>
+      <p></p>
     </v-form>
     </v-card>
     
   </template>
       <v-spacer></v-spacer>
+      <p></p>
+
     </v-card>
 
   </v-card>

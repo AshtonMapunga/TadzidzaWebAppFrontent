@@ -88,18 +88,7 @@
           <br>
           </template>
       </div>
-      <br>
-            <router-link to="/SuggestSearch">
-              <v-btn
-            type="submit"          
-            class="btn btn-lg btn-block ml-4"
-            width="97%"
-              dark   
-              color="indigo darken-2"
-            >
-              Back
-            </v-btn>
-          </router-link>
+    <p></p>
       <br>
       <router-link to="/SuggestSearch">
               <v-btn
@@ -112,6 +101,8 @@
               Back
             </v-btn>
           </router-link>
+      <br>
+      <p></p>
       <br>
   </template>
   

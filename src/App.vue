@@ -9,9 +9,9 @@
       elevate-on-scroll
       class="mb-12"
     >
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+    <v-avatar color="surface-variant" size="55"><img src="./assets/mapmak66666.jpg" alt=""></v-avatar>
 
-      <v-toolbar-title>Tadzidza</v-toolbar-title>
+      <v-toolbar-title class="ml-3">WeLearn</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -89,8 +89,7 @@
     </v-sheet>
   </v-card>
 </template>
-    <v-main>
-    </v-main>
+
   </v-app>
   
 </template>

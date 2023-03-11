@@ -4,8 +4,8 @@
     class="mx-auto"
     max-width="644"
     style="margin-top: 40px;"  >
-  <p class="signInHeader">Already have an account? <router-link to="/teacher-login">Sign in</router-link></p>
-   <h1 class="signInHeader">Sign in to TItle</h1>
+  <p class="signInHeader">Already have an account? <router-link to="/admin-login">Sign in</router-link></p>
+   <h1 class="signInHeader">Sign up to WeLearn</h1>
        <v-divider></v-divider>
 <template>
   <v-form

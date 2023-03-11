@@ -5,7 +5,7 @@
       style="border-radius: 25px; background-color:   rgb(251, 251, 253);"
     >
       <v-card-text color="indigo darken-2">
-        <p id="Name" class="text-h3" >
+        <p id="Name" class="text-h4" >
           {{full_name}}
         </p>
         <v-container>

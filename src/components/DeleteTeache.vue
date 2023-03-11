@@ -5,7 +5,7 @@
       elevation="9"
     
     >
-           <h1 style="font-size: 48px;" class="signInHeader">Seach for student</h1>
+           <h1 style="font-size: 48px;" class="signInHeader">Seach for Teacher</h1>
            
   
   <v-card
@@ -73,7 +73,7 @@
               </v-list-item-action>
   
               <v-list-item-content>
-                <v-list-item-title style="font-size: 25px; color: #303F9F"> Student's Name: <b> {{ Nameoftudents }}</b></v-list-item-title>
+                <v-list-item-title style="font-size: 25px; color: #303F9F"> Teacher's Name: <b> {{ Nameoftudents }}</b></v-list-item-title>
               </v-list-item-content>
             </v-list-item>
             <br>
@@ -114,7 +114,7 @@
   
     export default {
       data: () => ({    
-        DoesNotExist: "Student with such email does not exist! please enter the correct email",  
+        DoesNotExist: " Teacher with such email does not exist! please enter the correct email",  
         show: false,
         NoSuccess:false,
         Success:false,
