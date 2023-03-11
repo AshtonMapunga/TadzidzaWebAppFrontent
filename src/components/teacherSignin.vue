@@ -124,7 +124,7 @@ import axios from 'axios'
     methods: {
       validate () {
         if(this.$refs.form.validate()){
-        axios.post('http://localhost:5050/post/teacher', this.Form)
+        axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacher', this.Form)
         .then( (response)=>{
           console.log(response.data)
           if(response.data=="The Teacher is successfully saved"){

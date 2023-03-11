@@ -227,11 +227,11 @@
     },
     async created(){
       const Email = localStorage.getItem("Email")
-      const response = await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
+      await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
         headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }
-      } )
+      } ).then((response)=>{
         this.full_name=response.data.User.full_name
         this.Maths = response.data.User.Maths
         this.CombinedScience = response.data.User.CombinedScience
@@ -243,6 +243,9 @@
         console.log(this.Accounts)
         this.Geography = response.data.User.Geography
         this.Agriculture = response.data.User.Agriculture
+      })
+
+
         // Maths
         if(this.Maths===null){
           this.MathsComment = "Results are not out"

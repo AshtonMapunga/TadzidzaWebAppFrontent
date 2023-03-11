@@ -171,7 +171,7 @@
           Save
         </v-btn>
         <p></p>
-        <router-link to="/SuggestSearch">
+        <router-link to="/student-account">
               <v-btn
             type="submit"          
             class="btn btn-lg btn-block"
@@ -411,7 +411,7 @@
         if(MyPhysics!="Physics"){
           this.Form.PhysicsRegister=false
         }
-        axios.post('http://localhost:5050/post/saveandupdatestudent', this.Form,{
+        axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdatestudent', this.Form,{
           headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }

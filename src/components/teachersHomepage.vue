@@ -166,12 +166,13 @@
     },  
     async created(){
         const Email = localStorage.getItem("Email")
-        const response =await Axios.get(`http://localhost:5050/post/teacherlogin/${Email}`,{
+       await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
-        } )
+        } ).then((response)=>{
           this.full_name=response.data.User.Name
+        })
   
     }
   }

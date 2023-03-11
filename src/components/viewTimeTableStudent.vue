@@ -163,18 +163,25 @@
     async created(){
 
         const Email = localStorage.getItem("Email")
-        const response = await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
+        await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
-        } )
+        } ).then((response)=>{
           this.className=response.data.User.className
           const full_name=response.data.User.full_name
+          if(full_name===null){
+            this.NotAuthorized=true
+          }
+        })
+
 
           const newFormForm = {
             ClassName: this.className
           }
-        const Response = await Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/TimeTable/findone', newFormForm)
+        await Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/TimeTable/findone', newFormForm)
+        .then((Response)=>{
+          
         if(Response.data==="The class does not exist"){
             this.Success=true
         }
@@ -188,6 +195,7 @@
         if(Response.data==="The class does not exist"){
             this.Success=true
         }
+        })
         // .then( (response)=>{
         //     console.log(response.data)
         //   const ClassStudent = response.data.User.ClassName
@@ -201,9 +209,7 @@
         //     this.Success=true
         //   }
         // })
-        if(full_name===null){
-            this.NotAuthorized=true
-          }
+
   
     }
     }

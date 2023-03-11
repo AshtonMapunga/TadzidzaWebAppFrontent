@@ -79,12 +79,14 @@
     },  
     async created(){
         const Email = localStorage.getItem("Email")
-        const response = await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
+        await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
-        } )
+        } ).then((response)=>{
           this.full_name=response.data.User.full_name
+
+        })
   
     }
   }

@@ -154,7 +154,7 @@
         MessageReceived(){
           this.Messagesss=true
 
-          this.SocketInstance = io("http://localhost:4000")
+          this.SocketInstance = io("https://tadzidza-welearnwebappggfg-api.onrender.com")
 
           this.SocketInstance.on("message:received", (data)=>{
             this.Messages = this.Messages.concat(data)
@@ -182,24 +182,28 @@
         }
     },
     async created(){
-      this.SocketInstance = io("http://localhost:4000")
-      const response = await Axios.get(`http://localhost:5050/text/get/messages`,{
+      this.SocketInstance = io("https://tadzidza-welearnwebappggfg-api.onrender.com")
+       await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/text/get/messages`,{
         headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }
-      } )
+      } ).then((response)=>{
+        this.Messages = response.data
+
+      })
         
-       this.Messages = response.data
        const Email = localStorage.getItem("Email")
-      const Response = await Axios.get(`http://localhost:5050/post/teacherlogin/${Email}`,{
+      await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherlogin/${Email}`,{
         headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }
-      } )
+      } ).then((Response)=>{
         this.Name=Response.data.User.Name
         this.className=Response.data.User.className
 
         console.log(this.Name)
+      })
+
   }
   
   }

@@ -539,7 +539,7 @@ export default {
   }),
   methods:{
     DeleteBook(allbook){
-          Axios.post('http://localhost:5050/post/dlibrary/delete', {Link : allbook.Link 
+          Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/dlibrary/delete', {Link : allbook.Link 
           }, {
           headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
@@ -555,12 +555,14 @@ export default {
     }
     },
   async created(){
-    const response = await Axios.get(`http://localhost:5050/get/All/library`,{
+    await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/get/All/library`,{
       headers:{
         Authorization: "Basic " + localStorage.getItem("Tokken")
       }
-    } )       
-     this.AllBooks= response.data
+    } ).then((response)=>{
+      this.AllBooks= response.data
+
+    })       
 }
 
 }

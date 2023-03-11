@@ -301,7 +301,7 @@
         if(MyPhysics!="Physics"){
           this.Form.PhysicsRegister=false
         }
-        Axios.post('http://localhost:5050/post/saveandupdatestudent', this.Form,{
+        Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdatestudent', this.Form,{
           headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }
@@ -327,16 +327,19 @@
       },
     async created(){
         const Email = localStorage.getItem("Email")
-        const response = await Axios.get(`http://localhost:5050/post/studentlogin/${Email}`,{
+        await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
-        } )
+        } ).then((response)=>{
+          console.log(response)
           this.Form.Email = response.data.User.Email
           this.StudentName = response.data.User.full_name
           this.classOfstudent = response.data.User.className
           this.Form.Password = response.data.User.Password
           
+        })
+
     }
     }
   </script>

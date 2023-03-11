@@ -402,7 +402,7 @@
           English:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -601,7 +601,7 @@
           Maths:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -799,7 +799,7 @@
           Accounts:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -999,7 +999,7 @@
           Biology:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -1207,7 +1207,7 @@
           Physics:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -1415,7 +1415,7 @@
           Biology:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -1618,7 +1618,7 @@
           CombinedScience:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -1818,7 +1818,7 @@
           Geography:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -2021,7 +2021,7 @@
           Agriculture:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-      Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+      Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -2224,7 +2224,7 @@
           History:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-         Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+         Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -2424,7 +2424,7 @@
           Chemistry:this.MathsArray,
           Number_of_Students: this.Number_of_Subjects
         }
-        Axios.post(`http://localhost:5050/post/saveandupdateteacher`, newForm, {
+        Axios.post(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/saveandupdateteacher`, newForm, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -2448,11 +2448,11 @@
       },
     async created(){
         const Email = localStorage.getItem("Email")
-        const response = await Axios.get(`http://localhost:5050/post/teacherlogin/${Email}`,{
+        await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
-        } )
+        } ).then((response)=>{
           this.Form.Email = response.data.User.Email
           this.StudentName = response.data.User.Name
           this.classOfstudent = response.data.User.className
@@ -2519,6 +2519,8 @@
             return item !== Historyy.NameofSubject
           })
           this.itemSubjects= filterAHistory
+        })
+
 
     }
     }

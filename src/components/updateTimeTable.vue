@@ -987,7 +987,7 @@
     ]
         }
         
-        Axios.post('http://localhost:5050/post/TimeTable/update', newForm)
+        Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/TimeTable/update', newForm)
           .then( (response)=>{
             console.log(response.data)
             if(response.data=="The class timetable has been successfully updated"){
@@ -1007,11 +1007,11 @@
     },
       async created(){
           const Email = localStorage.getItem("Email")
-          const response =await Axios.get(`http://localhost:5050/post/teacherlogin/${Email}`,{
+          await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherlogin/${Email}`,{
             headers:{
               Authorization: "Basic " + localStorage.getItem("Tokken")
             }
-          } )
+          } ).them((response)=>{
             this.className=response.data.User.className
             const full_name=response.data.User.Name
             console.log(this.className)
@@ -1019,7 +1019,7 @@
               this.NotAuthorized=true
               this.Subjects=false
             }
-
+          })
       }
     }
   </script>

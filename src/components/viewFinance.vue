@@ -107,11 +107,12 @@
     },
   async created(){
       const Email = localStorage.getItem("Email")
-      const response = await Axios.get(`http://localhost:5050/post/studentlogin/${Email}`,{
+      const response = await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
         headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }
       } )
+      console.log(response)
          this.FeesTransaction = response.data.User.FeesTransaction
         this.Nameoftudents = response.data.User.full_name
         this.EmailofStudent = response.data.User.Email

@@ -129,18 +129,19 @@
     async created(){
 
         const Email = localStorage.getItem("Email")
-        const response =await Axios.get(`http://localhost:5050/post/teacherlogin/${Email}`,{
+        const response =await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
         } )
+        console.log(response)
           this.className=response.data.User.className
    
           console.log(this.className)
           const newFormForm = {
             ClassName: this.className
           }
-          Axios.post('http://localhost:5050/post/TimeTable/findone', newFormForm)
+          Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/TimeTable/findone', newFormForm)
         .then( (response)=>{
           console.log(response.data.User.ClassName)
           this.Monday = response.data.User.Monday

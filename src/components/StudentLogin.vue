@@ -67,16 +67,16 @@ data: () => ({
         methods: {
       validate () {
         if(this.$refs.form.validate()){
-       Axios.post('http://localhost:5050/post/studentlogin', this.Form)
+       Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin', this.Form)
         .then( (response)=>{
            if(response.data=="Invalid Email or Password"){
             this.AlreadyExist=true
           }
           else{
+            this.$router.push({ path: '/sudent-home' })
             localStorage.setItem('Email', response.data.User.Email)
             localStorage.setItem('full_name', response.data.User.full_name)
             localStorage.setItem('Tokken', response.data.Tokken)
-            this.$router.push({ path: '/sudent-home' })
           }
         })
         }

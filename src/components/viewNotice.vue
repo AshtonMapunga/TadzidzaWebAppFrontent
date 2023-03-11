@@ -52,13 +52,14 @@
    
     },
     async created(){
-      const response = await Axios.get(`http://localhost:5050/get/All/notice`,{
+      await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/get/All/notice`,{
         headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }
-      } )
+      } ).then((response)=>{
+        this.AllNotices= response.data
+      })
         
-       this.AllNotices= response.data
   }
   
   }
