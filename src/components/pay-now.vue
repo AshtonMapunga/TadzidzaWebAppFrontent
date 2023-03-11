@@ -181,7 +181,7 @@
           phoneNumber: this.PhoneNumber,
           Description: "Fees paid",
           } 
-          Axios.post('http://localhost:5050/send/money', payLoad,{
+          Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/send/money', payLoad,{
       headers:{
       Authorization: "Basic " + localStorage.getItem("Tokken")
     }
@@ -208,7 +208,7 @@
       },
     async created(){
         const Email = localStorage.getItem("Email")
-        const response = await Axios.get(`http://localhost:5050/post/studentlogin/${Email}`,{
+        const response = await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/studentlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }

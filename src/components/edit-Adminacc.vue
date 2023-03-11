@@ -194,7 +194,7 @@ methods:{
         Password: this.Password,
 
       }
-      Axios.post('http://localhost:5050/post/updateAmin',object, {
+      Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/updateAmin',object, {
       headers:{
         Authorization: "Basic " + localStorage.getItem("Tokken")
       }
@@ -219,7 +219,7 @@ methods:{
 },  
 async created(){
     const Email = localStorage.getItem("Email")
-    const response =await Axios.get(`http://localhost:5050/post/adminlogin/${Email}`,{
+    const response =await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/adminlogin/${Email}`,{
       headers:{
         Authorization: "Basic " + localStorage.getItem("Tokken")
       }

@@ -85,7 +85,6 @@
           }
         } ).then((response)=>{
           this.full_name=response.data.User.full_name
-
         })
   
     }

@@ -218,7 +218,7 @@
         validate(){
             if(this.$refs.form.validate()){
                 const Email = this.NameofTeacher
-                Axios.get(`http://localhost:5050/post/teacherloginName/${Email}`,{
+                Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherloginName/${Email}`,{
         headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }

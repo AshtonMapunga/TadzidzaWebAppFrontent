@@ -134,7 +134,7 @@
       methods: {
         validate () {
           if(this.$refs.form.validate()){
-            axios.post('http://localhost:5050/post/post/library', this.Form,{
+            axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/post/library', this.Form,{
                 headers:{
                 Authorization: "Basic " + localStorage.getItem("Tokken")
               }

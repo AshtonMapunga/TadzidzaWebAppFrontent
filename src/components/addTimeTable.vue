@@ -1023,7 +1023,7 @@ valid: false,
   ]
       }
       
-      Axios.post('http://localhost:5050/post/post/classtimetable', newForm)
+      Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/post/classtimetable', newForm)
         .then( (response)=>{
           console.log(response.data)
           if(response.data=="Class timetable is successfully saved"){
@@ -1045,7 +1045,7 @@ valid: false,
   },
     async created(){
         const Email = localStorage.getItem("Email")
-        const response =await Axios.get(`http://localhost:5050/post/teacherlogin/${Email}`,{
+        const response =await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }
@@ -1060,7 +1060,7 @@ valid: false,
           const newFormForm = {
             ClassName: this.className
           }
-          Axios.post('http://localhost:5050/post/TimeTable/findone', newFormForm)
+          Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/TimeTable/findone', newFormForm)
         .then( (response)=>{
           console.log(response.data.User.ClassName)
          if(response.data.User.ClassName!=null){

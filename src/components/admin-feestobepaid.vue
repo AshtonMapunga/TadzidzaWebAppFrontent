@@ -95,7 +95,7 @@
           AmountPaid: Fees,
           Description: "Fees to be paid"
         }
-        Axios.post('http://localhost:5050/post/fees/tobepaid', Form,{
+        Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/fees/tobepaid', Form,{
           headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }

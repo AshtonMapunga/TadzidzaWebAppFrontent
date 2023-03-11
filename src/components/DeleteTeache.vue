@@ -148,7 +148,7 @@
             const object ={
             Email: this.Email
         }
-    Axios.post('http://localhost:5050/post/deleteTeacher', object, {
+    Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/deleteTeacher', object, {
       headers:{
         Authorization: "Basic " + localStorage.getItem("Tokken")
       }
@@ -168,7 +168,7 @@
             if(this.$refs.form.validate()){
 
       const Email = this.Surname
-        Axios.get(`http://localhost:5050/post/teacherloginName/${Email}`,{
+        Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherloginName/${Email}`,{
         headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
         }

@@ -118,7 +118,7 @@ import axios from 'axios'
     methods: {
       validate () {
         if(this.$refs.form.validate()){
-        axios.post('http://localhost:5050/admin/post/admin', this.Form)
+        axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/admin/post/admin', this.Form)
         .then( (response)=>{
           console.log(response.data)
           if(response.data=="The admin is successfully saved"){

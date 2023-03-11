@@ -117,7 +117,7 @@
         Notice: this.NoticeValue, 
     }
     console.log(Form)
-    Axios.post('http://localhost:5050/post/post/NoticeBoard', Form,{
+    Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/post/NoticeBoard', Form,{
       headers:{
       Authorization: "Basic " + localStorage.getItem("Tokken")
     }

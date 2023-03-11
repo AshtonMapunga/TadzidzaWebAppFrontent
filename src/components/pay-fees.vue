@@ -95,7 +95,7 @@ export default {
       Description: "Fees paid"
     }
     console.log(Form)
-    Axios.post('http://localhost:5050/post/addsubject/addfees', Form,{
+    Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/addsubject/addfees', Form,{
       headers:{
       Authorization: "Basic " + localStorage.getItem("Tokken")
     }

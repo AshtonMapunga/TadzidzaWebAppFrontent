@@ -136,7 +136,7 @@ import Axios from 'axios';
             className: this.className
           }
 
-          Axios.post('http://localhost:5050/post/findclassAndSubject', object, {
+          Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/findclassAndSubject', object, {
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }

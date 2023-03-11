@@ -71,7 +71,7 @@ export default {
   }),
   methods:{
     DeleteNotice(AllNotice){
-          Axios.post('http://localhost:5050/post/Notice/delete', {Notice : AllNotice.Notice 
+          Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/Notice/delete', {Notice : AllNotice.Notice 
           }, {
           headers:{
           Authorization: "Basic " + localStorage.getItem("Tokken")
@@ -89,7 +89,7 @@ export default {
  
   },
   async created(){
-    const response = await Axios.get(`http://localhost:5050/get/All/notice`,{
+    const response = await Axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/get/All/notice`,{
       headers:{
         Authorization: "Basic " + localStorage.getItem("Tokken")
       }

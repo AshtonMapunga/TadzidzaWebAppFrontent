@@ -169,7 +169,7 @@
             FifthClassName: parseInt(this.Form.FourthClassName),
             SecondClassNames: parseInt(this.Form.ThirdClassName)
            }
-           axios.post('http://localhost:5050/get/All/enrolment', Sendd)
+           axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/get/All/enrolment', Sendd)
           .then( (response)=>{
             console.log(response.data)
             if(response.data=="You have successfully enroled first year students"){
@@ -181,7 +181,7 @@
           })
         },
        async getEnrolStud(){
-          const response = await axios.get(`http://localhost:5050/getEnroled/student`,{
+          const response = await axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/getEnroled/student`,{
       } )
 
         this.ArrayofStudents = response.data
@@ -225,7 +225,7 @@
 
 
         const Email = localStorage.getItem("Email")
-        const response =await axios.get(`http://localhost:5050/post/adminlogin/${Email}`,{
+        const response =await axios.get(`https://tadzidza-welearnwebappggfg-api.onrender.com/post/adminlogin/${Email}`,{
           headers:{
             Authorization: "Basic " + localStorage.getItem("Tokken")
           }

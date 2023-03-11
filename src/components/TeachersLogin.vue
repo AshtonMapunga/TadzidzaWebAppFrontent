@@ -70,7 +70,7 @@ data: () => ({
         methods: {
       validate () {
         if(this.$refs.form.validate()){
-       Axios.post('http://localhost:5050/post/teacherlogin', this.Form)
+       Axios.post('https://tadzidza-welearnwebappggfg-api.onrender.com/post/teacherlogin', this.Form)
         .then( (response)=>{
            if(response.data=="Invalid Email or Password"){
             this.AlreadyExist=true
